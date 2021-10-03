@@ -25,6 +25,11 @@ namespace AJClubs.Controllers
             return View(await _context.Country.ToListAsync());
         }
 
+        public IActionResult Index2()
+        {
+            return View(_context.Country.ToList());
+        }
+
         // GET: AJCountries/Details/5
         // return details of selected country
         public async Task<IActionResult> Details(string id)
