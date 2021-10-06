@@ -20,6 +20,7 @@ namespace AJClubs.Controllers
 
         public IActionResult Index()
         {
+            TempData["Message"] = "This is my test message!";
             return View();
         }
 

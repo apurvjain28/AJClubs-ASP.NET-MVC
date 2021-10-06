@@ -22,12 +22,7 @@ namespace AJClubs.Controllers
         // return list of all the countries in DB
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Country.ToListAsync());
-        }
-
-        public IActionResult Index2()
-        {
-            return View(_context.Country.ToList());
+            return View(await _context.Country.OrderBy(a => a.Name).ToListAsync());
         }
 
         // GET: AJCountries/Details/5
